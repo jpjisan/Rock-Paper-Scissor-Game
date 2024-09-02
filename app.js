@@ -19,21 +19,21 @@ const showWinner = (useWin, userChoice, comchoice) => {
   if (useWin) {
     userScore++;
     yourScore.innerText = userScore;
-    console.log("you win!");
-    msg.innerText = `you Win! Your ${userChoice} beats ${comchoice}`;
+   
+    msg.innerText = ` You Win! Your ${userChoice} beats ${comchoice}`;
     msg.style.backgroundColor = "#385E3C";
   } else {
-    console.log("you lost");
-    msg.innerText = `you lose!  ${comchoice} beats Your ${userChoice}`;
+    
+    msg.innerText = `You Lose!  ${comchoice} beats Your ${userChoice}`;
     msg.style.backgroundColor = "#C40233";
     comScore++;
     oppScore.innerText = comScore;
   }
 };
 const playGame = (userChoice) => {
-  console.log("userChoice is", userChoice);
+  
   const comchoice = genComChoice();
-  console.log("comp choice is", comchoice);
+  
 
   if (userChoice === comchoice) {
     draw();
